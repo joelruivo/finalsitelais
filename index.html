@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ============================================================
+  GUIA DE IMAGENS (coloque os arquivos na MESMA pasta deste index.html)
+  Ordem de aparicao na pagina:
+    imagem1.jpg -> Banner principal (topo)
+    imagem2.jpg -> Quem sou eu
+    imagem3.jpg -> Atendimentos
+    imagem4.jpg -> Sobre a psicanalise
+    imagem5.jpg -> Agendamento (fundo da secao)
+    logo.png    -> Nome "Lais Morandin" (cabecalho, Quem sou eu e rodape)
+  Para trocar uma foto, basta substituir o arquivo mantendo o mesmo nome.
+  Se usar .png em vez de .jpg, altere a extensao no nome indicado abaixo.
+  ============================================================
+-->
+<title>Lais Morandin | Psicóloga</title>
+<meta name="description" content="Lais Morandin, psicóloga clínica orientada pela psicanálise. Atendimentos on-line e presenciais (Botafogo, RJ) para jovens, adultos e idosos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg: #221609;
+    --bg-2: #2c1c0f;
+    --panel: #33210f;
+    --panel-light: #4d3319;
+    --panel-line: rgba(216,163,92,0.28);
+    --cream: #f2e4cd;
+    --cream-dim: #d9c6a6;
+    --amber: #d69a53;
+    --amber-soft: #c98446;
+    --amber-deep: #9c5f2c;
+    --serif: 'Fraunces', Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+    --sans: 'Karla', 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:500;
+    letter-spacing:0.005em;
+    color:var(--cream);
+  }
+
+  .kicker{
+    font-family:var(--sans);
+    font-size:0.8rem;
+    color:var(--amber);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+
+  .rule{
+    width:52px;
+    height:2px;
+    background:var(--amber);
+    border:none;
+    margin:22px 0 26px;
+  }
+
+  .rule.center{ margin-left:auto; margin-right:auto; }
+
+  /* ---------- header ---------- */
+
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(34,22,9,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--panel-line);
+  }
+
+  .nav-inner{
+    max-width:1120px;
+    margin:0 auto;
+    padding:18px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+
+  .brand a{ text-decoration:none; }
+
+  .logo-name{ display:block; height:30px; width:auto; }
+  .logo-h2{ height:48px; margin-bottom:6px; }
+  .logo-foot{ height:28px; }
+
+  .brand-name{
+    font-family:var(--serif);
+    font-style:normal;
+    font-weight:600;
+    letter-spacing:0.01em;
+    font-size:1.5rem;
+    color:var(--cream);
+  }
+
+  .brand-sub{
+    font-family:var(--sans);
+    font-size:0.72rem;
+    color:var(--amber);
+    margin-top:3px;
+  }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+    align-items:center;
+  }
+
+  nav a{
+    text-decoration:none;
+    font-size:0.95rem;
+    color:var(--cream-dim);
+    transition:color 0.2s ease;
+    padding:4px 0;
+    border-bottom:1px solid transparent;
+  }
+
+  nav a:hover{ color:var(--amber); border-bottom-color:var(--amber); }
+
+  .nav-cta{
+    display:inline-block;
+    padding:10px 20px;
+    background:var(--amber);
+    color:#221609;
+    font-weight:600;
+    font-size:0.9rem;
+    text-decoration:none;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+
+  .nav-cta:hover{ background:var(--cream); }
+
+  .menu-btn{
+    display:none;
+    background:none;
+    border:1px solid var(--panel-line);
+    color:var(--cream);
+    width:42px;
+    height:42px;
+    border-radius:2px;
+    font-size:1.1rem;
+    cursor:pointer;
+  }
+
+  /* ---------- hero ---------- */
+
+  .hero{
+    position:relative;
+    min-height:62vh;
+    display:flex;
+    align-items:flex-end;
+    background-image:
+      linear-gradient(180deg, rgba(20,12,5,0.15) 0%, rgba(20,12,5,0.35) 55%, rgba(18,11,4,0.92) 100%),
+      url('imagem1.jpg') /* IMAGEM 1 - Banner principal (fundo do topo da pagina) - troque o arquivo imagem1.jpg */;
+    background-size:cover;
+    background-position:center 20%;
+  }
+
+  .hero-inner{
+    width:100%;
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px 52px;
+    display:flex;
+    justify-content:flex-end;
+  }
+
+  .hero-text{
+    text-align:right;
+    max-width:420px;
+  }
+
+  .hero-text p{
+    font-family:var(--serif);
+    font-size:1.3rem;
+    line-height:1.4;
+    color:var(--cream);
+    text-shadow:0 2px 18px rgba(0,0,0,0.55);
+  }
+
+  .hero-text p.small{
+    font-family:var(--sans);
+    font-size:1rem;
+    color:var(--cream-dim);
+    margin-top:8px;
+  }
+
+  /* ---------- intro line ---------- */
+
+  .intro{
+    padding:56px 0 8px;
+    text-align:center;
+  }
+
+  .intro p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.35rem;
+    max-width:640px;
+    margin:0 auto;
+    color:var(--cream-dim);
+    line-height:1.55;
+  }
+
+  .intro-author{
+    font-family:var(--sans);
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    color:var(--amber);
+    margin-top:14px;
+  }
+
+  /* ---------- generic section ---------- */
+
+  section{ padding:76px 0; }
+
+  .split{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:center;
+  }
+
+  .split.reverse{ grid-template-columns:1.15fr 0.85fr; }
+  .split.reverse .split-media{ order:2; }
+  .split.reverse .split-text{ order:1; }
+
+  .split-media img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border:1px solid var(--panel-line);
+  }
+
+  .split-text h2{
+    font-size:2rem;
+    margin-bottom:6px;
+  }
+
+  .split-text p{
+    color:var(--cream-dim);
+    margin-bottom:16px;
+    max-width:52ch;
+  }
+
+  .split-text p:last-child{ margin-bottom:0; }
+
+  .cred{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid var(--panel-line);
+    font-size:0.92rem;
+    color:var(--amber);
+  }
+
+  .cred span{ color:var(--cream-dim); display:block; margin-top:4px; }
+
+  .note-edit{
+    display:inline-block;
+    margin-top:10px;
+    font-size:0.78rem;
+    color:var(--amber-soft);
+    font-style:italic;
+  }
+
+  /* atendimentos two-part */
+
+  .method-lead{
+    max-width:64ch;
+    color:var(--cream-dim);
+    margin-bottom:34px;
+  }
+
+  .method-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin-bottom:34px;
+  }
+
+  .method-card{
+    background:var(--panel);
+    border:1px solid var(--panel-line);
+    padding:30px 28px;
+  }
+
+  .method-card h3{
+    font-size:1.15rem;
+    color:var(--amber);
+    margin-bottom:12px;
+  }
+
+  .method-card p{ color:var(--cream-dim); }
+
+  .method-note{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.1rem;
+    color:var(--cream);
+    max-width:60ch;
+    margin-bottom:34px;
+    line-height:1.5;
+  }
+
+  .first-session{
+    background:var(--bg-2);
+    border-left:3px solid var(--amber);
+    padding:26px 30px;
+  }
+
+  .first-session h3{
+    font-size:1.02rem;
+    color:var(--cream);
+    margin-bottom:10px;
+    font-family:var(--sans);
+    font-weight:600;
+  }
+
+  .first-session p{ color:var(--cream-dim); }
+
+  /* sobre a psicanalise - dark contrast band */
+
+  .psica{
+    background:var(--bg-2);
+    border-top:1px solid var(--panel-line);
+    border-bottom:1px solid var(--panel-line);
+  }
+
+  /* cta */
+
+  .cta{
+    position:relative;
+    background-image:
+      linear-gradient(120deg, rgba(20,12,5,0.88) 0%, rgba(20,12,5,0.72) 45%, rgba(20,12,5,0.4) 100%),
+      url('imagem5.jpg') /* IMAGEM 5 - Secao "Agendamento / Vamos conversar?" (fundo da secao) - troque o arquivo imagem5.jpg */;
+    background-size:cover;
+    background-position:center 30%;
+    padding:88px 0;
+  }
+
+  .cta-box{ max-width:460px; }
+
+  .cta h2{ font-size:2.1rem; margin-bottom:14px; }
+
+  .cta p{ color:var(--cream-dim); margin-bottom:28px; max-width:44ch; }
+
+  .btn-amber{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--amber);
+    color:#221609;
+    font-weight:600;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:2px;
+    font-size:1rem;
+    transition:background 0.2s ease;
+  }
+
+  .btn-amber:hover{ background:var(--cream); }
+
+  .cta-alt{
+    margin-top:16px;
+    font-size:0.88rem;
+    color:var(--cream-dim);
+  }
+
+  /* faq */
+
+  .faq-head{ margin-bottom:40px; }
+
+  .faq-head h2{ font-size:2rem; }
+
+  .faq-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+  }
+
+  .faq-card{
+    background:var(--panel-light);
+    border:1px solid var(--panel-line);
+    padding:28px 26px;
+  }
+
+  .faq-card h3{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:1.02rem;
+    color:var(--cream);
+    margin-bottom:10px;
+  }
+
+  .faq-card p{ color:var(--cream-dim); font-size:0.95rem; }
+
+  /* footer */
+
+  footer{
+    border-top:1px solid var(--panel-line);
+    padding:56px 0 34px;
+  }
+
+  .foot-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:34px;
+    margin-bottom:36px;
+  }
+
+  .foot-brand{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.3rem;
+  }
+
+  .foot-brand span{
+    display:block;
+    font-family:var(--sans);
+    font-style:normal;
+    font-size:0.8rem;
+    color:var(--amber);
+    margin-top:6px;
+  }
+
+  .foot-contact{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:0.94rem;
+  }
+
+  .foot-contact a{
+    text-decoration:none;
+    color:var(--cream-dim);
+  }
+
+  .foot-contact a:hover{ color:var(--amber); }
+
+  .foot-bottom{
+    border-top:1px solid var(--panel-line);
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:0.8rem;
+    color:var(--cream-dim);
+  }
+
+  /* mobile menu */
+
+  .mobile-panel{
+    display:none;
+    flex-direction:column;
+    background:var(--bg-2);
+    border-top:1px solid var(--panel-line);
+    padding:8px 32px 22px;
+  }
+
+  .mobile-panel a{
+    text-decoration:none;
+    color:var(--cream-dim);
+    padding:12px 0;
+    border-bottom:1px solid var(--panel-line);
+    font-size:1rem;
+  }
+
+  .mobile-panel.open{ display:flex; }
+
+  @media (max-width: 860px){
+    nav, .nav-cta{ display:none; }
+    .menu-btn{ display:block; }
+
+    .split, .split.reverse{
+      grid-template-columns:1fr;
+      gap:30px;
+    }
+    .split.reverse .split-media{ order:1; }
+    .split.reverse .split-text{ order:2; }
+    .split-media img{ aspect-ratio:16/10; }
+
+    .method-grid, .faq-grid{ grid-template-columns:1fr; }
+
+    .hero{ min-height:52vh; }
+    .hero-text{ text-align:right; max-width:100%; }
+    .hero-text p{ font-size:1.08rem; }
+
+    section{ padding:56px 0; }
+    .wrap{ padding:0 22px; }
+    .nav-inner{ padding:16px 22px; }
+
+    .cta h2{ font-size:1.7rem; }
+    .foot-grid{ flex-direction:column; }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <a href="#topo"><img class="logo-name" src="logo.png" alt="Lais Morandin"> <!-- LOGO: logo.png (nome em Coolvetica) --></a>
+      <span class="brand-sub">psicóloga &middot; psicanálise</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#quem-sou-eu">Quem sou eu</a></li>
+        <li><a href="#atendimentos">Atendimentos</a></li>
+        <li><a href="#psicanalise">Sobre a psicanálise</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/5521995485887?text=Gostaria%20de%20agendar%20uma%20entrevista%20inicial" target="_blank" rel="noopener">Agendar sessão</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">&#9776;</button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#quem-sou-eu">Quem sou eu</a>
+    <a href="#atendimentos">Atendimentos</a>
+    <a href="#psicanalise">Sobre a psicanálise</a>
+    <a href="#agendamento">Agendamento</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="https://wa.me/5521995485887?text=Gostaria%20de%20agendar%20uma%20entrevista%20inicial" target="_blank" rel="noopener">Agendar sessão &rarr;</a>
+  </div>
+</header>
+
+<div id="topo"></div>
+
+<section class="hero" aria-label="Apresentação">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p>Atendimentos on-line e presenciais</p>
+      <p class="small">Jovens, adultos e idosos &mdash; presencial em Botafogo, RJ, ou on-line em qualquer lugar do Brasil e fora dele</p>
+    </div>
+  </div>
+</section>
+
+<div class="intro wrap">
+  <p>&ldquo;Se a boca se cala, falam as pontas dos dedos.&rdquo;</p>
+  <p class="intro-author">Sigmund Freud</p>
+</div>
+
+<section id="quem-sou-eu">
+  <div class="wrap split">
+    <div class="split-media">
+      <!-- IMAGEM 2 - Secao "Quem sou eu" (foto vertical ao lado do texto) - arquivo: imagem2.jpg -->
+      <img src="imagem2.jpg" alt="Lais Morandin em uma biblioteca, segurando um livro">
+    </div>
+    <div class="split-text">
+      <div class="kicker">Quem sou eu</div>
+      <h2><img class="logo-name logo-h2" src="logo.png" alt="Lais Morandin"></h2>
+      <p>Sou psicóloga clínica formada pela Universidade Federal do Rio de Janeiro (UFRJ) e atuo orientada pela psicanálise, atendendo jovens, adultos e idosos.</p>
+      <p>Meus atendimentos acontecem de forma presencial, em Botafogo (RJ), ou on-line &mdash; você pode estar em qualquer lugar do Brasil, ou fora dele, e caminharemos juntos.</p>
+      <div class="cred">
+        CRP <span style="color:var(--amber-soft)">05/88897</span>
+        <span>Psicanalista em constante formação.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="atendimentos" style="background:var(--bg-2); border-top:1px solid var(--panel-line); border-bottom:1px solid var(--panel-line);">
+  <div class="wrap">
+    <div class="split reverse" style="margin-bottom:64px;">
+      <div class="split-media">
+        <!-- IMAGEM 3 - Secao "Atendimentos" (foto vertical ao lado de "Como funciona") - arquivo: imagem3.jpg -->
+      <img src="imagem3.jpg" alt="Sala de estar aconchegante com um divã rosa, luminária quente, relógio vintage e obras com temas de psicanálise">
+      </div>
+      <div class="split-text">
+        <div class="kicker">Atendimentos</div>
+        <h2>Como funciona</h2>
+        <p class="method-lead" style="margin-bottom:0;">O processo analítico se sustenta através da relação que construímos, sessão a sessão, entre analista e analisando &mdash; presencialmente, em Botafogo (RJ), ou on-line. Diferente de uma conversa social, usamos aqui um método chamado <em>associação livre</em>.</p>
+      </div>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <h3>A sua parte</h3>
+        <p>Você é convidado a falar livremente sobre o que vier à cabeça &mdash; sem se preocupar com filtros, julgamentos ou se aquilo faz sentido para mim. De um sonho estranho a um incômodo do dia a dia, a liberdade é sua.</p>
+      </div>
+      <div class="method-card">
+        <h3>A minha parte</h3>
+        <p>Como analista, ofereço uma escuta especializada. Posso fazer perguntas, apontar questões que passam despercebidas e interpretar pontos da sua fala, para que decifremos juntos os sentidos do seu inconsciente.</p>
+      </div>
+    </div>
+
+    <p class="method-note">A única regra aqui é a espontaneidade &mdash; é através dessa fala sem amarras que acessamos o que está escrito nas entrelinhas da sua história.</p>
+
+    <div class="first-session">
+      <h3>A primeira sessão</h3>
+      <p>Vamos nos conhecer: você me conta o que te trouxe até aqui, eu explico como o tratamento funciona, combinamos valores, horários e compromissos &mdash; e decidimos juntos se seguiremos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="psicanalise" class="psica">
+  <div class="wrap split reverse">
+    <div class="split-media">
+      <!-- IMAGEM 4 - Secao "Sobre a psicanalise" (foto vertical ao lado do texto) - arquivo: imagem4.jpg -->
+      <img src="imagem4.jpg" alt="Livro laranja cobrindo o rosto de Lais Morandin">
+    </div>
+    <div class="split-text">
+      <div class="kicker">Sobre a psicanálise</div>
+      <h2>O que está abaixo da água</h2>
+      <p>Gosto de pensar a mente como um iceberg. O que vemos na superfície &mdash; pensamentos lógicos, decisões do dia a dia &mdash; é só a ponta. Abaixo da água está o inconsciente: memórias esquecidas, medos e desejos que nem sabíamos que tínhamos.</p>
+      <p>A psicanálise, criada por Freud em Viena, parte de uma descoberta simples: quando não conseguimos transformar uma dor em palavras, o corpo encontra outros caminhos para expressá-la &mdash; sintomas físicos, angústias sem causa aparente, repetições que não entendemos.</p>
+      <p>Ao longo do processo, torna-se possível dar voz ao que estava calado. Deixamos de ser apenas levados pela correnteza do inconsciente e começamos a assumir o leme da nossa própria jornada.</p>
+    </div>
+  </div>
+</section>
+
+<section id="agendamento" class="cta">
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="kicker" style="color:var(--amber);">Agendamento</div>
+      <h2>Vamos conversar?</h2>
+      <p>Você pode agendar nossa primeira sessão pelo WhatsApp, com uma mensagem já pronta, ou por uma ligação, se preferir.</p>
+      <a class="btn-amber" href="https://wa.me/5521995485887?text=Gostaria%20de%20agendar%20uma%20entrevista%20inicial" target="_blank" rel="noopener">Agendar pelo WhatsApp &rarr;</a>
+      <p class="cta-alt">(21) 99548-5887</p>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <div class="faq-head">
+      <div class="kicker">Dúvidas frequentes</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h3>Qual o valor da sessão?</h3>
+        <p>De acordo com o código de ética do CFP, não é permitido divulgar publicamente o valor dos atendimentos. Entre em contato para agendarmos uma entrevista inicial, quando conversamos sobre valores e forma de pagamento.</p>
+      </div>
+      <div class="faq-card">
+        <h3>Qual a frequência dos atendimentos?</h3>
+        <p>Os atendimentos costumam ser semanais. Dia, horário e frequência são definidos após a primeira sessão, considerando sua disponibilidade e o que combinarmos juntos.</p>
+      </div>
+      <div class="faq-card">
+        <h3>Quanto tempo dura cada sessão?</h3>
+        <p>Em média, 50 minutos. Isso é apenas uma estimativa &mdash; a duração real varia de acordo com o que você traz em cada sessão.</p>
+      </div>
+      <div class="faq-card">
+        <h3>Existe previsão de encerramento?</h3>
+        <p>Não existe um prazo fixo. A duração do processo é conversada com você ao longo do caminho, à medida que aquilo que te trouxe até aqui vai sendo elaborado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="logo-name logo-foot" src="logo.png" alt="Lais Morandin">
+        <span>psicóloga &middot; CRP 05/88897</span>
+      </div>
+      <div class="foot-contact">
+        <a href="https://wa.me/5521995485887?text=Gostaria%20de%20agendar%20uma%20entrevista%20inicial" target="_blank" rel="noopener">WhatsApp &middot; (21) 99548-5887</a>
+        <a href="https://instagram.com/laismorandin" target="_blank" rel="noopener">Instagram &middot; @laismorandin</a>
+        <a href="mailto:morandinlais@gmail.com">morandinlais@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Lais Morandin. Todos os direitos reservados.</span>
+      <span>Atendimento psicológico on-line e presencial &middot; Botafogo, RJ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click', () => {
+    mobilePanel.classList.toggle('open');
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobilePanel.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
